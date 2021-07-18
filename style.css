@@ -138,6 +138,7 @@ main {
 .feature-title {
   font-size: larger;
   text-align: center;
+  margin-top: 10px;
   padding-bottom: 15px;
 }
 .single-feature {
