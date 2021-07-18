@@ -133,6 +133,7 @@ main {
   display: block;
   height: auto;
   object-fit: cover;
+  max-width: 600px;
 }
 .feature-title {
   font-size: larger;
