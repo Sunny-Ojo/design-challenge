@@ -55,7 +55,7 @@ main {
 }
 
 #hero {
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   background-image: url("images/1.jpg");
   /* display: block; */
   background-repeat: no-repeat;
