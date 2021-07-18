@@ -24,7 +24,7 @@ p {
 
 header {
   background-color: #eee;
-  position: relative;
+  position: fixed;
   width: 100%;
 }
 header nav {
@@ -56,8 +56,8 @@ main {
 
 #hero {
   height: calc(100vh - 70px);
-  background-image: url("/images/bg.jpg");
-  display: block;
+  background-image: url("/images/1.jpg");
+  /* display: block; */
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: lighten;
@@ -69,6 +69,11 @@ main {
   justify-content: center;
   /* opacity: 0.5; */
 }
+.progress-bar {
+  height: 3px;
+  background: #047aed;
+  width: 0%;
+}
 .hero-contents {
   position: relative;
   top: 0;
@@ -76,7 +81,7 @@ main {
   bottom: 0;
   max-width: 650px;
   right: 0;
-  z-index: 1000;
+  /* z-index: 1000; */
   /* position: abssolute; Position the background text */
   bottom: 0; /* At the bottom. Use top:0 to append it to the top */
   background: rgb(0, 0, 0); /* Fallback color */
@@ -112,14 +117,14 @@ main {
   color: white;
 }
 .section-padding {
-  padding: 50px 40px !important;
+  padding: 50px 30px !important;
   background: #f8f8f8;
 }
 #features {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 20px; */
+  gap: 20px;
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
 }
@@ -138,7 +143,7 @@ main {
   margin-bottom: 10px;
 }
 .single-feature h1 {
-  font-weight: 400;
+  font-weight: 500;
   padding: 10px 0px;
 
   /* font-size: medium; */
@@ -152,17 +157,18 @@ main {
   font-family: "Montserrat", sans-serif;
   position: relative;
   background: cornflowerblue;
+  color: black;
 }
 .steps-contents {
-  min-height: 100vh;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   text-align: center;
-  /* gap: 20px; */
+  gap: 20px;
+  margin-top: 30px;
 }
 .fas {
-  background: white;
+  /* background: white; */
 }
 .steps-single-content p {
   padding: 20px;
@@ -170,9 +176,14 @@ main {
 .steps-heading {
   text-align: center;
 }
-.steps-heading h1,
-p {
-  padding: 10px;
+.steps-heading h1 {
+  padding: 15px 0px;
+}
+.steps-heading p {
+  padding: 15px 0px;
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 15px;
 }
 
 @media screen and (max-width: 600px) {
@@ -187,6 +198,9 @@ p {
   }
   #features {
     flex-direction: column;
+  }
+  .steps-contents {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   #steps .steps-contents {
